@@ -285,6 +285,18 @@ router-ipv6:
 router-mstp:
 	$(MAKE) -b -C $@
 
+.PHONY: readprop
+readprop:
+	$(MAKE) -b -C $@
+
+.PHONY: readpropm
+readpropm:
+	$(MAKE) -b -C $@
+
+.PHONY: writeprop
+writeprop:
+	$(MAKE) -b -C $@
+
 .PHONY: writepropm
 writepropm:
 	$(MAKE) -b -C $@

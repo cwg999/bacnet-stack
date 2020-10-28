@@ -93,6 +93,18 @@ uevent:
 whois:
 	$(MAKE) -C apps $@
 
+.PHONY: readprop
+readprop:
+	$(MAKE) -b -C apps $@
+
+.PHONY: readpropm
+readpropm:
+	$(MAKE) -b -C apps $@
+
+.PHONY: writeprop
+writeprop:
+	$(MAKE) -b -C apps $@
+
 .PHONY: writepropm
 writepropm:
 	$(MAKE) -s -C apps $@
