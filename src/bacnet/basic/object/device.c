@@ -549,6 +549,11 @@ bool Device_Set_Object_Instance_Number(uint32_t object_id)
 {
     bool status = true; /* return value */
 
+    char *pEnv = NULL;
+    pEnv = getenv("BACNET_DEVICE_INSTANCE_NUMBER");
+    if(pEnv) {
+        object_id = (uint32_t) strtol(pEnv, NULL, 0);
+    }
     if (object_id <= BACNET_MAX_INSTANCE) {
         /* Make the change and update the database revision */
         Object_Instance_Number = object_id;
